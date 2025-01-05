@@ -1,0 +1,74 @@
+# @license AGPL-3.0-or-later
+#
+# Copyright 2025 Hong Xu <hong@topbug.net>
+#
+# This file is part of Delpa.
+#
+# Delpa program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+name: Build and Deploy Pages
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  build:
+    name: Build Website
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build the website
+        run: npm run build
+
+      - name: Upload site
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          name: build
+          path: build
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy Pages
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: [build]
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        # Don't use an exact version here because pull requests don't test this
+        # line
+        uses: actions/deploy-pages@v4

@@ -86,15 +86,6 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-          ],
-        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Hong Xu, Built with Docusaurus.`,
     },

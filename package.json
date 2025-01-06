@@ -32,7 +32,7 @@
     "tsx": "^4.19.2",
     "typescript": "~5.7.2"
   },
-  "license": "AGPL-3.0-or-later",
+  "license": "GPL-3.0-or-later",
   "browserslist": {
     "production": [
       ">0.5%",

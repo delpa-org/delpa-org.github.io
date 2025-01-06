@@ -3,6 +3,42 @@ title: The Delpa Project
 tagline: "Melpa Snapshots"
 ---
 
-The Delpa project manages and hosts past [Melpa][] repository snapshots.
+<!--
+@license AGPL-3.0-or-later
+
+Copyright(C) 2025 Hong Xu <hong@topbug.net>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+
+import SnapshotVersions from "./_snapshot_versions.mdx";
+
+The Delpa project manages and hosts past [Melpa][] repository snapshots. A new
+snapshot is created roughly once per month. This is helpful for pinning package
+versions as Melpa usually tracks latest versions of upstream, which often causes
+breakage. If you prefer some stability, you can use a pinned version here
+instead of directly installing from Melpa.
+
+To use a snapshot, pick a version below and add the following to your Emacs initialization file:
+
+```emacs-lisp
+(add-to-list 'package-archives
+             '("delpa" . "https://packages.delpa.org/snapshot/{your version}/") t)
+```
+
+The following snapshots are currently available:
+
+<SnapshotVersions />
 
 [Melpa]: https://melpa.org

@@ -48,12 +48,10 @@ jobs:
       - name: Build the website
         run: npm run build
 
-      - name: Upload site
-        uses: actions/upload-artifact@v4.4.3
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
-          name: build
           path: build
-          if-no-files-found: error
 
   deploy:
     name: Deploy Pages

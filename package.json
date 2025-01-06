@@ -7,6 +7,7 @@
     "docusaurus": "docusaurus",
     "dev": "docusaurus start",
     "format": "prettier . --write",
+    "lint": "prettier . --check",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

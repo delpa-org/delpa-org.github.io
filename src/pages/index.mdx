@@ -30,15 +30,36 @@ versions as Melpa usually tracks latest versions of upstream, which often causes
 breakage. If you prefer some stability, you can use a pinned version here
 instead of directly installing from Melpa.
 
-To use a snapshot, pick a version below and add the following to your Emacs initialization file:
+## Usage
+
+To use a snapshot, pick a version below and add the following to your Emacs
+initialization file:
 
 ```emacs-lisp
 (add-to-list 'package-archives
              '("delpa" . "https://packages.delpa.org/snapshot/{your version}/") t)
 ```
 
-The following snapshots are currently available:
+### Available Snapshot Versions
 
 <SnapshotVersions />
 
+## Bug Report and Feature Request
+
+To report a bug or request a feature about the Delpa project in general, please
+open a ticket at the [Delpa meta issue tracker][].
+
+## Ask a Question or Show Off a Trick
+
+Please talk about them in the [Forum][].
+
+## Contribution
+
+Please follow the [official GitHub guide][] to create a pull request for [any
+relevant repositories in the delpa-org
+organization](https://github.com/orgs/delpa-org/repositories).
+
+[Delpa meta issue tracker]: https://github.com/delpa-org/meta/issues
+[Forum]: https://github.com/delpa-org/meta/discussions
 [Melpa]: https://melpa.org
+[official GitHub guide]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests

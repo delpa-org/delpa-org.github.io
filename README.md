@@ -29,5 +29,6 @@ served using any static contents hosting service.
 
 ## Special Notes
 
-The file `static/snapshot_versions.json` is deliberated set to wrong values. It
+The files `static/snapshot_versions.json` and
+`static/snapshot_versions.json.sha256` are deliberated set to wrong values. They
 will be overridden to correct values during deployment.

@@ -46,7 +46,9 @@ jobs:
         run: npm ci
 
       - name: Generate snapshot list
-        run: gh repo list delpa-org --json name --jq '[.[] | select(.name | startswith("melpa-snapshot-")) | .name.[15:]]' > static/snapshot_versions.json
+        run: |
+          gh repo list delpa-org --json name --jq '[.[] | select(.name | startswith("melpa-snapshot-")) | .name.[15:]]' > static/snapshot_versions.json
+          cd static && sha256sum snapshot_versions.json > snapshot_versions.json.sha256
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

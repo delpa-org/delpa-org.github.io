@@ -24,11 +24,36 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 import SnapshotVersions from "./_snapshot_versions.mdx";
 
-The Delpa project manages and hosts past [Melpa][] repository snapshots. A new
-snapshot is created roughly twice per month. This is helpful for pinning package
-versions as Melpa usually tracks latest versions of upstream, which often causes
-breakage. If you prefer some stability, you can use a pinned version here
-instead of directly installing from Melpa.
+# The Delpa Project
+
+The Delpa project manages and hosts historical [Melpa][] repository snapshots. A
+new snapshot is created roughly twice per month. You can use a pinned version
+here instead of directly installing from Melpa, which usually tracks latest
+commits from upstream.
+
+## Why Using a Snapshot?
+
+This is useful for two reasons, among other things.
+
+### Less Breakage
+
+Melpa usually tracks the latest commits from upstream, which often causes
+breakage. Using a snapshot offers some stability.
+
+### Less Prone to Security Chain Attack
+
+Configuration frameworks such as [Spacemacs][] and [Doom Emacs][] commonly pull
+hundreds of packages from Melpa, depending on the configuration. This poses a
+significant [supply chain security
+hazard](https://en.wikipedia.org/wiki/Supply_chain_attack): We become a victim
+if any of these hundreds of packages become malicious. This can happen for many
+reasons, such as when a maintainer's account is hacked, or a maintainer becomes
+malicious ([example](https://github.com/vuejs/vue-cli/issues/7054)).
+
+Thankfully, Melpa packages are open source: Most malicious behaviors can be
+found and corrected within a few days, if not hours. By using a snapshot that
+has been tested for some days, such as one week or more, we can significantly
+reduce the chance of becoming a victim of such a attack.
 
 ## Usage
 
@@ -60,6 +85,8 @@ relevant repositories in the delpa-org
 organization](https://github.com/orgs/delpa-org/repositories).
 
 [Delpa meta issue tracker]: https://github.com/delpa-org/meta/issues
+[Doom Emacs]: https://doomemacs.org
 [Forum]: https://github.com/delpa-org/meta/discussions
 [Melpa]: https://melpa.org
+[Spacemacs]: https://www.spacemacs.org/
 [official GitHub guide]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests

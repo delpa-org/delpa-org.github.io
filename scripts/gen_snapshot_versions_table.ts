@@ -31,7 +31,7 @@ const table =
     .reverse()
     .map(
       (date: string) =>
-        `| ${date} | https://packages.delpa.org/snapshot/${date}/ |`,
+        `| ${date} | https://packages.delpa.org/melpa/snapshot/${date}/ |`,
     )
     .join("\n");
 

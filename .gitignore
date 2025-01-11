@@ -7,7 +7,7 @@
 # Generated files
 .docusaurus
 .cache-loader
-/src/pages/_snapshot_versions.mdx
+/src/pages/_melpa_snapshot_versions.mdx
 
 # Misc
 .DS_Store

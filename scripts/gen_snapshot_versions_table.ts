@@ -16,10 +16,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-/** Generate the snapshot table from snapshot_versions.json. */
+/** Generate the snapshot table from melpa_snapshot_versions.json. */
 
 import fs from "fs";
-import snapshotVersions from "../static/snapshot_versions.json" with { type: "json" };
+import snapshotVersions from "../static/melpa_snapshot_versions.json" with { type: "json" };
 
 const table =
   `
@@ -35,4 +35,4 @@ const table =
     )
     .join("\n");
 
-fs.writeFileSync("src/pages/_snapshot_versions.mdx", table);
+fs.writeFileSync("src/pages/_melpa_snapshot_versions.mdx", table);

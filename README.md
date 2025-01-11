@@ -29,6 +29,6 @@ served using any static contents hosting service.
 
 ## Special Notes
 
-The files `static/snapshot_versions.json` and
-`static/snapshot_versions.json.sha256` are deliberated set to wrong values. They
-will be overridden to correct values during deployment.
+The files `static/melpa_snapshot_versions.json` and
+`static/melpa_snapshot_versions.json.sha256` are deliberated set to wrong
+values. They will be overridden to correct values during deployment.

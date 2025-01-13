@@ -86,6 +86,15 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: "Legal",
+          items: [
+            {
+              label: "License and Terms",
+              href: "/#terms",
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Hong Xu, Built with Docusaurus.`,
     },

@@ -57,38 +57,32 @@ reduce the chance of becoming a victim of such a attack.
 
 ## Usage
 
-To use a snapshot, pick a version below and add the following to your Emacs
-initialization file:
+To use a particular snapshot version, pick a version in the [_Available Snapshot
+Versions_ subsection](#available-snapshot-versions) below and add the following
+to your Emacs initialization file:
 
 ```emacs-lisp
 (add-to-list 'package-archives
              '("delpa" . "https://packages.delpa.org/melpa/snapshot/{your version}/") t)
 ```
 
+Alternatively, add the following to your Emacs initialization file to use the
+most recent snapshot version that is at least `N` days old, where `1≤N≤270`:
+
+```emacs-lisp
+(add-to-list 'package-archives
+             ;; Replace {N} with a number between 1 and 270
+             '("delpa" . "https://packages.delpa.org/melpa/at-least-days-old/{N}/") t)
+```
+
 https://packages.delpa.org hosts the Delpa Redirection Server ([source
 code](https://github.com/delpa-org/redirection-server)), which redirects
 connections to [where the snapshot files are
-stored](https://github.com/orgs/delpa-org/repositories?q=melpa-snapshot-). By
+stored](https://github.com/orgs/delpa-org/repositories?q=melpa-snapshot-). **By
 connecting to https://packages.delpa.org, you acknowledge that you agree to the
-following statement:
+[terms near the end of this page](#terms).**
 
-<details open>
-
-<summary>License</summary>
-
-**Delpa Redirection Server is free software: you can redistribute it and/or
-modify it under the terms of the [GNU Affero General Public License][] as
-published by the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.**
-
-**Delpa Redirection Server is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU Affero General Public
-License][] for more details.**
-
-</details>
-
-### Available Snapshot Versions
+<h3 id="available-snapshot-versions">Available Snapshot Versions</h3>
 
 <SnapshotVersions />
 
@@ -106,6 +100,24 @@ Please talk about them in the [Forum][].
 Please follow the [official GitHub guide][] to create a pull request for [any
 relevant repositories in the delpa-org
 organization](https://github.com/orgs/delpa-org/repositories).
+
+<h2 id="terms">License and Terms</h2>
+
+By connecting to https://packages.delpa.org, you acknowledge that you agree to
+the following terms:
+
+> Delpa Redirection Server is free software: you can redistribute it and/or
+> modify it under the terms of the [GNU Affero General Public License][] as
+> published by the Free Software Foundation, either version 3 of the License, or
+> (at your option) any later version.
+>
+> Delpa Redirection Server is distributed in the hope that it will be useful,
+> but **WITHOUT ANY WARRANTY**; without even the implied warranty of
+> **MERCHANTABILITY** or **FITNESS FOR A PARTICULAR PURPOSE**. See the
+> [GNU Affero General Public License][] for more details.
+>
+> You should have received a copy of the GNU Affero General Public License along
+> with this program. If not, see \<https://www.gnu.org/licenses/\>.
 
 [Delpa meta issue tracker]: https://github.com/delpa-org/meta/issues
 [Doom Emacs]: https://doomemacs.org

@@ -30,7 +30,7 @@
     "@docusaurus/types": "3.8.1",
     "prettier": "3.6.2",
     "tsx": "4.20.3",
-    "typescript": "5.8.3"
+    "typescript": "5.9.2"
   },
   "license": "GPL-3.0-or-later",
   "browserslist": {

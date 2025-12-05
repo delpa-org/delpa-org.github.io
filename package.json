@@ -28,8 +28,8 @@
     "@docusaurus/module-type-aliases": "3.9.2",
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
-    "prettier": "3.6.2",
-    "tsx": "4.20.6",
+    "prettier": "3.7.3",
+    "tsx": "4.21.0",
     "typescript": "5.9.3"
   },
   "license": "GPL-3.0-or-later",

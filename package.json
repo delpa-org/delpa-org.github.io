@@ -28,7 +28,7 @@
     "@docusaurus/module-type-aliases": "3.9.2",
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
-    "prettier": "3.7.4",
+    "prettier": "3.8.0",
     "tsx": "4.21.0",
     "typescript": "5.9.3"
   },
@@ -46,6 +46,6 @@
     ]
   },
   "engines": {
-    "node": ">=24.12.0"
+    "node": ">=24.13.0"
   }
 }

@@ -76,4 +76,4 @@ jobs:
         id: deployment
         # Don't use an exact version here because pull requests don't test this
         # line
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

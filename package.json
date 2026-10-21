@@ -21,14 +21,14 @@
     "@mdx-js/react": "3.1.1",
     "clsx": "2.1.1",
     "prism-react-renderer": "2.4.1",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "prettier": "3.9.9",
+    "prettier": "3.9.10",
     "tsx": "4.23.15",
     "typescript": "6.0.3"
   },
@@ -46,6 +46,6 @@
     ]
   },
   "engines": {
-    "node": "26.11.1"
+    "node": "26.12.0"
   }
 }
